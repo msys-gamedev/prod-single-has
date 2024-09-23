@@ -46,7 +46,7 @@
                 UnityInAppBrowser.sendMessageFromJS(message);
             }
         }
-       function ExitGame(val, token) {
+        function ExitGame(val, token) {
           const message = { action: "close_app", value: "Close Gam" };
           window.vuplex.postMessage(JSON.stringify(message));
             if (urlParams.has('lobby')) {
@@ -55,7 +55,6 @@
             }
             //ELSE exit unity webview
         }
-
         function OpenMultiplayer(link, val, token, bgm, sfx) {
             window.location.href = link + '?auth=' + token + '&uuid=' + val + '&sett=' + bgm + '.' + sfx;
         }
